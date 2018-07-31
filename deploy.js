@@ -13,7 +13,7 @@ const deploy = async () =>    {
     
     //get list of accounts from web3 eth
     const accounts = await web3.eth.getAccounts();
-    //
+    //Use the first account in the list to deploy
     console.log("\nAttempting to deploy with: \n" + accounts[0]);
     
     const result = await new web3.eth.Contract(JSON.parse(interface))
